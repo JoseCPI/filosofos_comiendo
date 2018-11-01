@@ -104,6 +104,7 @@ void *filosofar(void *arg){
         number[izq][i]=max_izq(izq)+1;////elejir el numero maximo en la lista para el palillo
         number[der][i]=max_der(der)+1;//hacer lo mismo que la linea anterior, pero con el otro palillo
         choosing[i] = 0;
+        printf("El filosofo (%i) quiere comer. con turno izquierdo (%i) y turno derecho(%i)\n", i, number[izq][i], number[der][i]);
 
 
         int j;
@@ -135,7 +136,7 @@ void *filosofar(void *arg){
         /////
         //Seccion Critica
         printf("El filosofo (%i) empezo a comer\n", i);
-        Sleep(rand() % max_pen);
+        Sleep(rand() % max_com);
         //termino seccion
         printf("El filosofo (%i) dejo de comer\n", i);
 
